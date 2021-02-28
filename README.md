@@ -20,12 +20,15 @@ Run StakeholderDetermining.java
 ```Java
 Run GoalDetermining.java 
 ```
-6. Define Threat-Protection Goal Association: Through this action, you can specify the association between threats and goals in other word, each threat affect which protection goals. For example, Unauthorized access affects confidentiality and integrity protection goals.
+5. Define Threat-Protection Goal Association: Through this action, you can specify the association between threats and goals in other word, each threat affect which protection goals. For example, Unauthorized access affects confidentiality and integrity protection goals.
 ```Java
 Run ThreatGoalAssociation.java 
 ```
-7. Define Threat Impacts: 
-8. 
+6. Define Threat Impacts: According to their impact criteria, the impact level of each threat for all involved stakeholders determines in Threat_Impact JSON file. In fact, in this action, the risk analyst assigns an integer value to the aversion level that each stakeholder is considered to have against each threat, according to his/her criteria.
+```Java
+Run PreferenceImpacting.java 
+```
+
 # How to use
 1. Clone the project
 2. Add the relevant Json files (Threats, Stakeholders, Goals, Threat_Impact, Threat_Controls, Threat_Affected) as 
