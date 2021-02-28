@@ -1,0 +1,44 @@
+{
+  "Stakeholder": [
+    {
+      "Stakeholder_name": "data subject",
+      "Preferences": [
+        {
+          "Preference_name": "health condition",
+          "Preference_id": 1,
+          "Preference_weight": 0.4
+        },
+        {
+          "Preference_name": "individual freedom",
+          "Preference_id": 2,
+          "Preference_weight": 0.2
+        },
+        {
+          "Preference_name": "social situation",
+          "Preference_id": 3,
+          "Preference_weight": 0.3
+        },
+        {
+          "Preference_name": "financial situation",
+          "Preference_id": 4,
+          "Preference_weight": 0.1
+        }
+      ]
+    },
+    {
+      "Stakeholder_name": "data controller",
+      "Preferences": [
+        {
+          "Preference_name": "reputational situation",
+          "Preference_id": 1,
+          "Preference_weight": 0.4
+        },
+        {
+          "Preference_name": "financial situation",
+          "Preference_id": 2,
+          "Preference_weight": 0.6
+        }
+      ]
+    }
+  ]
+}

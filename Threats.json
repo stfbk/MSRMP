@@ -1,0 +1,29 @@
+{
+  "Threat": [
+    {
+      "name": "Unlimited data storage",
+      "threatid": "1",
+      "malicious action": "Personal data is kept stored more than the time necessary for the purposes by ACME."
+    },
+    {
+      "name": "Unauthorized access and disclosure",
+      "threatid": "2",
+      "malicious action": "Due to over-privileged or inadequate controls, insiders (i.e., a medical practitioner or an ACME’s staff) modify patients’ data or disclose by mistake."
+    },
+    {
+      "name": "Linkage Attack",
+      "threatid": "3",
+      "malicious action": "Patients and their personal data can re-identify in de-identified data sets by outsiders malicious. (ACME data set)"
+    },
+     {
+      "name": "Denial of service",
+      "threatid": "4",
+      "malicious action": "Attackers can disrupt the communication channel between patients and the healthcare service provider in order to prevent data from being upload to the server."
+    },
+    {
+      "name": "Threat to intervenability",
+      "threatid": "5",
+      "malicious action": "ACME does not implement a procedure (technical and/or processes) that allows the patients to rectify, erase or block individual data."
+    }
+  ]
+}

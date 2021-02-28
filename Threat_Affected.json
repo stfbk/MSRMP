@@ -1,0 +1,69 @@
+{
+  "Threats": [
+    {
+      "threatname": "Unlimited data storage",
+      "AffectedGoals": [
+       	{
+          "name": "Confidentiality"
+        },
+        {
+          "name": "Unlinkability"
+        }
+      ],
+      "malicious action": "Personal data is kept stored more than the time necessary for the purposes by ACME.",
+      "observation_weight": 0.2
+    },
+    {
+      "threatname": "Unauthorized access and disclosure",
+      "AffectedGoals": [
+        {
+          "name": "Confidentiality"
+        },
+        {
+          "name": "Integrity"
+        },
+        {
+          "name": "Availability"
+        }
+      ],
+      "malicious action": "Due to over-privileged or inadequate controls, insiders (i.e., a medical practitioner or an ACME’s staff) modify patients’ data or disclose by mistake.",
+      "observation_weight": 0.3
+    },
+    {
+      "threatname": "Linkage Attack",
+      "AffectedGoals": [
+      	{
+          "name": "Confidentiality"
+        },
+        {
+          "name": "Unlinkability"
+        }
+      ],
+      "malicious action": "Patients and their personal data can re-identify in de-identified data sets by outsiders malicious. (ACME data set)",
+      "observation_weight": 0.2
+    },
+    {
+      "threatname": "Denial of service",
+      "AffectedGoals": [
+       	{
+          "name": "Integrity"
+        },
+        {
+          "name": "Availability"
+        }
+      ],
+      "malicious action": "Attackers can disrupt the communication channel between patients and the healthcare service provider in order to prevent data from being upload to the server.",
+      "observation_weight": 0.2
+    },
+    {
+      "threatname": "Threat to intervenability",
+      "AffectedGoals": [
+        {
+          "name": "Intervenability"
+        }
+      ],
+      "malicious action": "ACME does not implement a procedure (technical and/or processes) that allows the patients to rectify, erase or block individual data.",
+      "observation_weight": 0.1
+    }
+  ]
+}

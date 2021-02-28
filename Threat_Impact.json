@@ -1,0 +1,294 @@
+{
+  "ThreatImpactAssessment": [
+    {
+      "threat_name": "Unlimited data storage",
+      "Stakeholder": [
+        {
+          "Stakeholder_name": "data subject",
+          "Stakeholder_preferences": [
+            {
+              "Preference_name": "health condition",
+              "Preference_id": 1,
+              "Preference_impact": 0,
+              "Preference_weight": 0.4
+            },
+            {
+              "Preference_name": "individual freedom",
+              "Preference_id": 2,
+              "Preference_impact": 0,
+              "Preference_weight": 0.2
+            },
+            {
+              "Preference_name": "social situation",
+              "Preference_id": 3,
+              "Preference_impact": 1,
+              "Preference_weight": 0.3
+            },
+            {
+              "Preference_name": "financial situation",
+              "Preference_id": 4,
+              "Preference_impact": 0,
+              "Preference_weight": 0.1
+            }
+          ],
+          "Threat_Impact_level": 0.07499999999999998
+        }
+      ]
+    },
+    {
+      "threat_name": "Unlimited data storage",
+      "Stakeholder": [
+        {
+          "Stakeholder_name": "data controller",
+          "Stakeholder_preferences": [
+            {
+              "Preference_name": "reputational situation",
+              "Preference_id": 1,
+              "Preference_impact": 1,
+              "Preference_weight": 0.4
+            },
+            {
+              "Preference_name": "financial situation",
+              "Preference_id": 2,
+              "Preference_impact": 2,
+              "Preference_weight": 0.6
+            }
+          ],
+          "Threat_Impact_level": 0.3928571428571429
+        }
+      ]
+    },
+    {
+      "threat_name": "Unauthorized access and disclosure",
+      "Stakeholder": [
+        {
+          "Stakeholder_name": "data subject",
+          "Stakeholder_preferences": [
+            {
+              "Preference_name": "health condition",
+              "Preference_id": 1,
+              "Preference_impact": 4,
+              "Preference_weight": 0.4
+            },
+            {
+              "Preference_name": "individual freedom",
+              "Preference_id": 2,
+              "Preference_impact": 2,
+              "Preference_weight": 0.2
+            },
+            {
+              "Preference_name": "social situation",
+              "Preference_id": 3,
+              "Preference_impact": 2,
+              "Preference_weight": 0.3
+            },
+            {
+              "Preference_name": "financial situation",
+              "Preference_id": 4,
+              "Preference_impact": 3,
+              "Preference_weight": 0.1
+            }
+          ],
+          "Threat_Impact_level": 0.725
+        }
+      ]
+    },
+    {
+      "threat_name": "Unauthorized access and disclosure",
+      "Stakeholder": [
+        {
+          "Stakeholder_name": "data controller",
+          "Stakeholder_preferences": [
+            {
+              "Preference_name": "reputational situation",
+              "Preference_id": 1,
+              "Preference_impact": 2,
+              "Preference_weight": 0.4
+            },
+            {
+              "Preference_name": "financial situation",
+              "Preference_id": 2,
+              "Preference_impact": 2,
+              "Preference_weight": 0.6
+            }
+          ],
+          "Threat_Impact_level": 0.5
+        }
+      ]
+    },
+    {
+      "threat_name": "Linkage Attack",
+      "Stakeholder": [
+        {
+          "Stakeholder_name": "data subject",
+          "Stakeholder_preferences": [
+            {
+              "Preference_name": "health condition",
+              "Preference_id": 1,
+              "Preference_impact": 0,
+              "Preference_weight": 0.4
+            },
+            {
+              "Preference_name": "individual freedom",
+              "Preference_id": 2,
+              "Preference_impact": 4,
+              "Preference_weight": 0.2
+            },
+            {
+              "Preference_name": "social situation",
+              "Preference_id": 3,
+              "Preference_impact": 3,
+              "Preference_weight": 0.3
+            },
+            {
+              "Preference_name": "financial situation",
+              "Preference_id": 4,
+              "Preference_impact": 1,
+              "Preference_weight": 0.1
+            }
+          ],
+          "Threat_Impact_level": 0.4499999999999999
+        }
+      ]
+    },
+    {
+      "threat_name": "Linkage Attack",
+      "Stakeholder": [
+        {
+          "Stakeholder_name": "data controller",
+          "Stakeholder_preferences": [
+            {
+              "Preference_name": "reputational situation",
+              "Preference_id": 1,
+              "Preference_impact": 3,
+              "Preference_weight": 0.4
+            },
+            {
+              "Preference_name": "financial situation",
+              "Preference_id": 2,
+              "Preference_impact": 3,
+              "Preference_weight": 0.6
+            }
+          ],
+          "Threat_Impact_level": 0.7500000000000001
+        }
+      ]
+    },
+    {
+      "threat_name": "Denial of service",
+      "Stakeholder": [
+        {
+          "Stakeholder_name": "data subject",
+          "Stakeholder_preferences": [
+            {
+              "Preference_name": "health condition",
+              "Preference_id": 1,
+              "Preference_impact": 3,
+              "Preference_weight": 0.4
+            },
+            {
+              "Preference_name": "individual freedom",
+              "Preference_id": 2,
+              "Preference_impact": 3,
+              "Preference_weight": 0.2
+            },
+            {
+              "Preference_name": "social situation",
+              "Preference_id": 3,
+              "Preference_impact": 0,
+              "Preference_weight": 0.3
+            },
+            {
+              "Preference_name": "financial situation",
+              "Preference_id": 4,
+              "Preference_impact": 0,
+              "Preference_weight": 0.1
+            }
+          ],
+          "Threat_Impact_level": 0.44999999999999996
+        }
+      ]
+    },
+    {
+      "threat_name": "Denial of service",
+      "Stakeholder": [
+        {
+          "Stakeholder_name": "data controller",
+          "Stakeholder_preferences": [
+            {
+              "Preference_name": "reputational situation",
+              "Preference_id": 1,
+              "Preference_impact": 2,
+              "Preference_weight": 0.4
+            },
+            {
+              "Preference_name": "financial situation",
+              "Preference_id": 2,
+              "Preference_impact": 3,
+              "Preference_weight": 0.6
+            }
+          ],
+          "Threat_Impact_level": 0.642857142857143
+        }
+      ]
+    },
+    {
+      "threat_name": "Threat to intervenability",
+      "Stakeholder": [
+        {
+          "Stakeholder_name": "data subject",
+          "Stakeholder_preferences": [
+            {
+              "Preference_name": "health condition",
+              "Preference_id": 1,
+              "Preference_impact": 4,
+              "Preference_weight": 0.4
+            },
+            {
+              "Preference_name": "individual freedom",
+              "Preference_id": 2,
+              "Preference_impact": 3,
+              "Preference_weight": 0.2
+            },
+            {
+              "Preference_name": "social situation",
+              "Preference_id": 3,
+              "Preference_impact": 3,
+              "Preference_weight": 0.3
+            },
+            {
+              "Preference_name": "financial situation",
+              "Preference_id": 4,
+              "Preference_impact": 3,
+              "Preference_weight": 0.1
+            }
+          ],
+          "Threat_Impact_level": 0.8499999999999999
+        }
+      ]
+    },
+    {
+      "threat_name": "Threat to intervenability",
+      "Stakeholder": [
+        {
+          "Stakeholder_name": "data controller",
+          "Stakeholder_preferences": [
+            {
+              "Preference_name": "reputational situation",
+              "Preference_id": 1,
+              "Preference_impact": 2,
+              "Preference_weight": 0.4
+            },
+            {
+              "Preference_name": "financial situation",
+              "Preference_id": 2,
+              "Preference_impact": 2,
+              "Preference_weight": 0.6
+            }
+          ],
+          "Threat_Impact_level": 0.5
+        }
+      ]
+    }
+  ]
+}
