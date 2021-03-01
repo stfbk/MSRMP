@@ -23,30 +23,21 @@ The tool is divide into two main phases, 1) Risk evaluation 2) Optimization.
 For the first phase, you need to define three JSON files (`Threats`, `Goals`, `Stakeholder`) as input artifacts and three other JSON files as can be considered association actions (`Threat_Impact`, `Threat_Controls`, `Threat_Affected`) , and for the second, you need one additional JSON file which is `Threat_Existence`. 
 You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or automatically. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in *jsonFiles folder*. For automatically, you need to follow the following steps:
 
-**Note:** All classes mentioned below are defined in the *action folder*.
+**Note:** All classes have mentioned below are defined in the *action folder*.
 
-1. Define Threats: In order to define the list of threats in your system you can run following java class then define number of threats and their name through the console. 
+1. Define Threats: In order to define the list of threats in your system you can run ``ThreatDetermining.java`` class then define number of threats and their name through the console. The resuult stores in the `Threats` JSON file.
 
-```Java
-Run ThreatDetermining.java 
-```
-2. Define Stakeholders and their impact Criteria: The involved stakeholders in the analysis and their impact criteria define in the Stakeholder JSON file. For example, a stakeholder can be *Data subject*, and *Social situation, Individual freedom, Health condition and Financial situation* are its impact criteria.
-```Java
-Run StakeholderDetermining.java 
-```
-4. Define Protection Goals: The protection goals specify in the Goal JSON file, for example, *confidentiality, integrity, and availability*.
-```Java
-Run GoalDetermining.java 
-```
-5. Define Threat-Protection Goal Association: Through this action, you can specify the association between threats and goals in other word, each threat affect which protection goals. For example, Unauthorized access affects confidentiality and integrity protection goals.
-```Java
-Run ThreatGoalAssociation.java 
-```
-6. Define Threat Impacts: According to their impact criteria, the impact level of each threat for all involved stakeholders determines in Threat_Impact JSON file. In fact, in this action, the risk analyst assigns an integer value to the aversion level that each stakeholder is considered to have against each threat, according to his/her criteria.
-```Java
-Run PreferenceImpacting.java 
-```
-7. Define Threat Existence values: This JSON file needs for perfoming optimization where you must define all possible threat existence values for each threat.
+2. Define Stakeholders and their impact Criteria: The involved stakeholders in the analysis and their impact criteria can be determined through ``StakeholderDetermining.java`` class and then the result stores in the `Stakeholder` JSON file. For example, a stakeholder can be *Data subject*, and *Social situation, Individual freedom, Health condition and Financial situation* are its impact criteria.
+
+3. Define Protection Goals: The protection goals can be specified through ``GoalDetermining.java`` class and then the result stores in the `Goals` JSON file, for example, *confidentiality, integrity, and availability*.
+
+4. Determine Threat-Protection Goal Association : Through this association, you can specify the relation between threats and goals in other word, each threat affect which protection goals. For example, Unauthorized access threat affects confidentiality and integrity protection goals. Through ``ThreatGoalAssociation.java`` class you can specify this association, and the result stores in the `Threat_Affected` JSON file. 
+
+5. Associate Threat Impacts: According to their impact criteria, the impact level of each threat for all involved stakeholders determines in `Threat_Impact` JSON file. In fact, in this action, the risk analyst assigns an integer value to the aversion level that each stakeholder is considered to have against each threat, according to his/her criteria. Through ``PreferenceImpacting.java`` class you can determine the impact levels.
+
+6. Determine Controls: In this step, you can determine for each threat the potential controls. Through ``ControlDetermining.java`` class you can determine the controls for each threat, and then result stored in the `Threat_Controls` JSON file.
+
+7. Determine Threat Existence values: This JSON file needs for perfoming optimization where you must define all possible threat existence values for each threat.
 
 In order to perform optimization and plot the result , after providing all these JSON files, you just need to Run `` RunOptimization.java `` class from *optimization folder*.
 
