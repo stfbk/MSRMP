@@ -1,11 +1,24 @@
-# Multi-Stakeholder Risk Minimization Problem (MSRMP)
+# Multi-Stakeholder Risk Assessment Tool
 
-## Description of the Project
-Multi-Stakeholder Risk Minimization Problem
+It is a risk assessment tool that assesses the risk exposure levels in a multi-stakeholder manner for a given system. The tool has a two-fold purpose, (I) Evaluate and quantify risk levels for all involved stakeholders, and (II) Solving the risk minimization problem, which is a multi-objective optimization problem.  
+This tool works based on JSON file, all inputs and outputs. 
 
-You can either create JSON files manually (according to the existing example and its files structures) or automatically through running the defined classes as follows:
+## Requirements
+```
+-Java 8 or higher
+-Scala SDK V.2.13.2
+-JavaFx SDK V.11.0.2 (for plotting the result)
+-Gson library V.2.8.6 
+```
+# How to use
+1. Clone the project
+2. Import project into your desire IDE (our recommendation is IntelliJ IDEA)
+3. Define input files (i.e., adding the needed JSON files, such as Threats, Stakeholders, Goals, etc.)
+4. Define (, Threat_Impact, Threat_Controls, Threat_Affected) as 
 
-**Note:** All executable classes are defined in the *action folder*.
+You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or automatically. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in *jsonFiles folder*. For automatically, you need to follow the following steps:
+
+**Note:** All classes mentioned below are defined in the *action folder*.
 
 1. Define Threats: In order to define the list of threats in your system you can run following java class then define number of threats and their name through the console. 
 
@@ -28,10 +41,8 @@ Run ThreatGoalAssociation.java
 ```Java
 Run PreferenceImpacting.java 
 ```
+7. 
 
-# How to use
-1. Clone the project
-2. Add the relevant Json files (Threats, Stakeholders, Goals, Threat_Impact, Threat_Controls, Threat_Affected) as 
 
 # Documents
 This tool is part of following research papers:
