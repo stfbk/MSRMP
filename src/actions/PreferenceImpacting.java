@@ -32,8 +32,8 @@ public class PreferenceImpacting {
 		BufferedReader brs = null;
 		BufferedReader brt = null;
 		try {
-			brs = new BufferedReader(new FileReader("Stakeholder.json"));
-			brt = new BufferedReader(new FileReader("Threats.json"));
+			brs = new BufferedReader(new FileReader("src//jsonFiles//Stakeholder.json"));
+			brt = new BufferedReader(new FileReader("src//jsonFiles//Threats.json"));
 			ThreatResult resultt = gson.fromJson(brt, ThreatResult.class);
 			StakeholderResult results = gson.fromJson(brs, StakeholderResult.class);
 			if (results != null && resultt != null) {
@@ -112,10 +112,9 @@ public class PreferenceImpacting {
 		String strjson = gs.toJson(tiass_result);
 		FileWriter writer = null;
 		try {
-			writer = new FileWriter("Threat_Impact.json");
+			writer = new FileWriter("src//jsonFiles//Threat_Impact.json");
 			writer.write(strjson);
 		} catch (IOException e) {
-
 			e.printStackTrace();
 		} finally {
 			if (writer != null) {
@@ -123,12 +122,10 @@ public class PreferenceImpacting {
 					writer.flush();
 					writer.close();
 				} catch (IOException e) {
-
 					e.printStackTrace();
 				}
 			}
 		}
 		System.out.println("DONE!");
 	}
-
 }

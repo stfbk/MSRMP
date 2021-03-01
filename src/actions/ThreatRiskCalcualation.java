@@ -34,8 +34,8 @@ public class ThreatRiskCalcualation {
 		BufferedReader brtc = null;
 		BufferedReader brti = null;
 		try {
-			brtc = new BufferedReader(new FileReader("Threat_Criticality.json"));
-			brti = new BufferedReader(new FileReader("Threat_Impact.json"));
+			brtc = new BufferedReader(new FileReader("src//jsonFiles//Threat_Criticality.json"));
+			brti = new BufferedReader(new FileReader("src//jsonFiles//Threat_Impact.json"));
 			CriticalityResult resulttc = gson.fromJson(brtc, CriticalityResult.class);
 			ThreatImpactAssessmentResult resulttia = gson.fromJson(brti, ThreatImpactAssessmentResult.class);
 			int i = 0;
@@ -81,7 +81,7 @@ public class ThreatRiskCalcualation {
 		String strjson = gsons.toJson(tar_object);
 		FileWriter writer = null;
 		try {
-			writer = new FileWriter("Threat_Risk_Calculation.json");
+			writer = new FileWriter("src//jsonFiles//Threat_Risk_Calculation.json");
 			writer.write(strjson);
 		} catch (IOException e) {
 

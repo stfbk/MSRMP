@@ -40,10 +40,10 @@ public class GoalRiskExposure {
 		BufferedReader brstk;
 
 		try {
-			brg = new BufferedReader(new FileReader("Goals.json"));
-			brta = new BufferedReader(new FileReader("Threat_Affected.json"));
-			brtrc = new BufferedReader(new FileReader("Threat_Risk_Calculation.json"));
-			brstk = new BufferedReader(new FileReader("Stakeholder.json"));
+			brg = new BufferedReader(new FileReader("src//jsonFiles//Goals.json"));
+			brta = new BufferedReader(new FileReader("src//jsonFiles//Threat_Affected.json"));
+			brtrc = new BufferedReader(new FileReader("src//jsonFiles//Threat_Risk_Calculation.json"));
+			brstk = new BufferedReader(new FileReader("src//jsonFiles//Stakeholder.json"));
 
 			ThreatAssessmentResult results = gson.fromJson(brtrc, ThreatAssessmentResult.class);
 			GoalsResult resultg = gson.fromJson(brg, GoalsResult.class);
@@ -96,7 +96,7 @@ public class GoalRiskExposure {
 		String strjson = gsons.toJson(graresult_object);
 		FileWriter writer = null;
 		try {
-			writer = new FileWriter("Risk_Exposure_Result.json");
+			writer = new FileWriter("src//jsonFiles//Risk_Exposure_Result.json");
 			writer.write(strjson);
 		} catch (IOException e) {
 

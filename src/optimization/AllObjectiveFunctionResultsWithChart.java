@@ -17,15 +17,12 @@ import java.math.RoundingMode;
 
 public class AllObjectiveFunctionResultsWithChart {
 
-    public static void main( String[] args ) throws Exception, FileNotFoundException {
+    public static void main( String[] args ) throws Exception {
 
         Gson gson = new Gson();
-        BufferedReader brta = null;
-        BufferedReader brtrc = null;
-        BufferedReader brg = null;
-        brg = new BufferedReader(new FileReader("Goals.json"));
-        brta = new BufferedReader(new FileReader("Threat_Affected.json"));
-        brtrc = new BufferedReader(new FileReader("All_Threat_Risk_Calculations.json"));
+        BufferedReader brg = new BufferedReader(new FileReader("src//jsonFiles//Goals.json"));
+        BufferedReader brta = new BufferedReader(new FileReader("src//jsonFiles//Threat_Affected.json"));
+        BufferedReader brtrc = new BufferedReader(new FileReader("src//jsonFiles//All_Threat_Risk_Calculations.json"));
         GoalsResult resultg = gson.fromJson(brg, GoalsResult.class);
         AffectionResult resultaf = gson.fromJson(brta, AffectionResult.class);
         AllThreatAssessmentResult resulta = gson.fromJson(brtrc, AllThreatAssessmentResult.class);

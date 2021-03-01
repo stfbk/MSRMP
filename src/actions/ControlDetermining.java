@@ -19,14 +19,14 @@ public class ControlDetermining {
 	public static void main( String[] args) {
 		@SuppressWarnings("resource")
         Scanner scan = new Scanner(System.in);
-		List<Control> control_list = new ArrayList<Control>();
+		List<Control> control_list = new ArrayList<>();
 		Control control_object = new Control();
-		List<PossibleControl> possible_control_list = new ArrayList<PossibleControl>();
+		List<PossibleControl> possible_control_list = new ArrayList<>();
 		
 		Gson gson = new Gson();
 		BufferedReader brt = null;
 		try {
-			brt = new BufferedReader(new FileReader("Threats.json"));
+			brt = new BufferedReader(new FileReader("src//jsonFiles//Threats.json"));
 			ThreatResult result = gson.fromJson(brt, ThreatResult.class);
 			int c = 1;
 			if (result != null) {
@@ -86,7 +86,7 @@ public class ControlDetermining {
 		String strjson = gs.toJson(control_result);
 		FileWriter writer = null;
 		try {
-			writer = new FileWriter("Threat_Controls.json");
+			writer = new FileWriter("src//jsonFiles//Threat_Controls.json");
 			writer.write(strjson);
 		} catch (IOException e) {
 

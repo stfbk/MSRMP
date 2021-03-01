@@ -19,10 +19,10 @@ public class StakeholderDetermining {
 
 	public static void main( String[] args) {
 
-		List<Stakeholder> stakeholder = new ArrayList<Stakeholder>();
-		List<Stakeholder> stakeholder1 = new ArrayList<Stakeholder>();
-		List<String> stakeholder_names = new ArrayList<String>();
-		List<Preference> preference = new ArrayList<Preference>();
+		List<Stakeholder> stakeholder = new ArrayList<>();
+		List<Stakeholder> stakeholder1 = new ArrayList<>();
+		List<String> stakeholder_names = new ArrayList<>();
+		List<Preference> preference = new ArrayList<>();
 		// Preference pr= new Preference();
 		Stakeholder stk = new Stakeholder();
 		StakeholderResult sr = new StakeholderResult();
@@ -72,7 +72,7 @@ public class StakeholderDetermining {
 		String strjson = gson.toJson(sr);
 		FileWriter writer = null;
 		try {
-			writer = new FileWriter("Stakeholder.json");
+			writer = new FileWriter("src//jsonFiles//Stakeholder.json");
 			writer.write(strjson);
 		} catch (IOException e) {
 

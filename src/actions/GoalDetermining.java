@@ -46,7 +46,7 @@ public class GoalDetermining extends Goal {
 
 		FileWriter writer = null;
 		try {
-			writer = new FileWriter("Goals.json");
+			writer = new FileWriter("src//jsonFiles//Goals.json");
 			writer.write(strjson);
 		} catch (IOException e) {
 

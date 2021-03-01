@@ -10,14 +10,11 @@ import java.util.List;
 public class CreateThreatCriticalityClass {
 
    public static void main( String[] args) throws Exception {
-
        List<List<Double>> List_TC = new ArrayList<>();
        Gson gson = new Gson();
-       BufferedReader brte;
-       BufferedReader brta;
-       brte = new BufferedReader(new FileReader("Threat_Existence.json"));
+       BufferedReader brte = new BufferedReader(new FileReader("src//jsonFiles//Threat_Existence.json"));
        ThreatExistenceResult rs = gson.fromJson(brte, ThreatExistenceResult.class);
-       brta = new BufferedReader(new FileReader("Threat_Affected.json"));
+       BufferedReader brta = new BufferedReader(new FileReader("src//jsonFiles//Threat_Affected.json"));
        AffectionResult as = gson.fromJson(brta, AffectionResult.class);
        int d= 0;
        //if (brte!= null && brta!= null) {
@@ -52,9 +49,9 @@ public class CreateThreatCriticalityClass {
                "        Gson g = new Gson();\n" +
                "        BufferedReader brte = null;\n" +
                "        BufferedReader brta = null;\n" +
-               "        brte = new BufferedReader(new FileReader(\"Threat_Existence.json\"));\n" +
+               "        brte = new BufferedReader(new FileReader(\"src//jsonFiles//Threat_Existence.json\"));\n" +
                "        ThreatExistenceResult rs = g.fromJson(brte, ThreatExistenceResult.class);\n" +
-               "        brta = new BufferedReader(new FileReader(\"Threat_Affected.json\"));\n" +
+               "        brta = new BufferedReader(new FileReader(\"src//jsonFiles//Threat_Affected.json\"));\n" +
                "        AffectionResult as = g.fromJson(brta, AffectionResult.class);\n" +
                "        int d= 0;\n" +
                "        if (brte!= null && brta!= null) {\n" +
@@ -70,7 +67,7 @@ public class CreateThreatCriticalityClass {
         //
        String p1="    Gson gson = new Gson();\n" +
                "       BufferedReader br = null;\n" +
-               "       br = new BufferedReader(new FileReader(\"Threats.json\"));\n" +
+               "       br = new BufferedReader(new FileReader(\"src//jsonFiles//Threats.json\"));\n" +
                "       ThreatResult result = gson.fromJson(br, ThreatResult.class);\n" +
                "       List<AllPossibleThreatCriticality> alptc = new ArrayList<>();\n" +
                "       AllPossibleTCResult alpResult= new AllPossibleTCResult();\n"+ "int ID=0;";
@@ -99,7 +96,7 @@ public class CreateThreatCriticalityClass {
                "       String strjson = gsons.toJson(alpResult);\n" +
                "       FileWriter writer = null;\n" +
                "       try {\n" +
-               "           writer = new FileWriter(\"All_Possible_Threat_Criticalities.json\");\n" +
+               "           writer = new FileWriter(\"src//jsonFiles//All_Possible_Threat_Criticalities.json\");\n" +
                "           writer.write(strjson);\n" +
                "       } catch (IOException e) {\n" +
                "\n" +

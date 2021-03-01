@@ -16,16 +16,16 @@ public class ThreatCriticalityQuantification {
 
 	public static void main( String[] args) {
 		double u = 0;
-		List<Double> list_normalized_threat_criticality = new ArrayList<Double>();
-		List<Double> list_normalized_threat_criticality2 = new ArrayList<Double>();
-		List<ThreatCriticality> threat_criticality_list = new ArrayList<ThreatCriticality>();
+		List<Double> list_normalized_threat_criticality = new ArrayList<>();
+		List<Double> list_normalized_threat_criticality2 = new ArrayList<>();
+		List<ThreatCriticality> threat_criticality_list = new ArrayList<>();
 		CriticalityResult cr = new CriticalityResult();
 		Gson gson = new Gson();
 		BufferedReader brtc = null;
 		BufferedReader brta = null;
 		try {
-			brtc = new BufferedReader(new FileReader("Threat_Controls.json"));
-			brta = new BufferedReader(new FileReader("Threat_Affected.json"));
+			brtc = new BufferedReader(new FileReader("src//jsonFiles//Threat_Controls.json"));
+			brta = new BufferedReader(new FileReader("src//jsonFiles//Threat_Affected.json"));
 			ControlResult resulttc = gson.fromJson(brtc, ControlResult.class);
 			AffectionResult resultaf = gson.fromJson(brta, AffectionResult.class);
 			if (resulttc != null && resultaf != null) {
@@ -75,7 +75,7 @@ public class ThreatCriticalityQuantification {
 		String strjson = gsons.toJson(cr);
 		FileWriter writer = null;
 		try {
-			writer = new FileWriter("Threat_Criticality.json");
+			writer = new FileWriter("src//jsonFiles//Threat_Criticality.json");
 			writer.write(strjson);
 		} catch (IOException e) {
 

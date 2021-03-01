@@ -16,7 +16,7 @@ public class ThreatDetermining {
 		Gson gson = new Gson();
 		BufferedReader br = null;
 		try {
-			br = new BufferedReader(new FileReader("Threats.json"));
+			br = new BufferedReader(new FileReader("src//jsonFiles//Threats.json"));
 			ThreatResult result = gson.fromJson(br, ThreatResult.class);
 
 			if (result != null) {

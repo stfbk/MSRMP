@@ -38,8 +38,8 @@ public class ThreatGoalAssociation extends Threats {
 		//int total_number_possible_affection=0;
 
 		try {
-			brt = new BufferedReader(new FileReader("Threats.json"));
-			brg = new BufferedReader(new FileReader("Goals.json"));
+			brt = new BufferedReader(new FileReader("src//jsonFiles//Threats.json"));
+			brg = new BufferedReader(new FileReader("src//jsonFiles//Goals.json"));
 			ThreatResult resultt = gsont.fromJson(brt, ThreatResult.class);
 			GoalsResult resultg = gsong.fromJson(brg, GoalsResult.class);
 		//	total_number_possible_affection=resultt.getThreat().size()*resultg.getGoals().size();
@@ -109,7 +109,7 @@ public class ThreatGoalAssociation extends Threats {
 		String strjson = gson.toJson(tr1);
 		FileWriter writer = null;
 		try {
-			writer = new FileWriter("Threat_Affected.json");
+			writer = new FileWriter("src//jsonFiles//Threat_Affected.json");
 			writer.write(strjson);
 		} catch (IOException e) {
 
