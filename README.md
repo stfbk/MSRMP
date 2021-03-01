@@ -1,7 +1,8 @@
 # Multi-Stakeholder Risk Assessment Tool
 
 It is a risk assessment tool that assesses the risk exposure levels in a multi-stakeholder manner for a given system. The tool has a two-fold purpose, (I) Evaluate and quantify risk levels for all involved stakeholders, and (II) Solving the risk minimization problem, which is a multi-objective optimization problem.  
-This tool works based on JSON file, all inputs and outputs. 
+This tool works based on JSON file, all inputs and outputs. Before using the tool, we invite you to read the documentation files (see Documents Section) in order to have a clear view of how this tool works. The documents are the research papers that define the Multi-Stakeholder Risk Minimization Problem and solve this problem.
+
 
 ## Requirements
 ```
@@ -10,12 +11,16 @@ This tool works based on JSON file, all inputs and outputs.
 -JavaFx SDK V.11.0.2 (for plotting the result)
 -Gson library V.2.8.6 
 ```
-# How to use
+## How to use
+```
 1. Clone the project
 2. Import project into your desire IDE (our recommendation is IntelliJ IDEA)
-3. Define input files (i.e., adding the needed JSON files, such as Threats, Stakeholders, Goals, etc.)
-4. Define (, Threat_Impact, Threat_Controls, Threat_Affected) as 
+3. Define or import input files (i.e., adding the needed JSON files, such as Threats, Goals, etc.)
+```
+## Description of the tool
+The tool is divide into two main phases, 1) Risk evaluation 2) Optimization.
 
+For the first phase, you need to define three JSON files (`Threats`, `Goals`, `Stakeholder`) as input artifacts and three other JSON files as can be considered association actions (`Threat_Impact`, `Threat_Controls`, `Threat_Affected`) , and for the second, you need one additional JSON file which is `Threat_Existence`. 
 You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or automatically. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in *jsonFiles folder*. For automatically, you need to follow the following steps:
 
 **Note:** All classes mentioned below are defined in the *action folder*.
@@ -41,7 +46,9 @@ Run ThreatGoalAssociation.java
 ```Java
 Run PreferenceImpacting.java 
 ```
-7. 
+7. Define Threat Existence values: This JSON file needs for perfoming optimization where you must define all possible threat existence values for each threat.
+
+In order to perform optimization and plot the result , after providing all these JSON files, you just need to Run `` RunOptimization.java `` class from *optimization folder*.
 
 
 # Documents
