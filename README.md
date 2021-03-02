@@ -25,7 +25,7 @@ You can either create the input JSON files manually, according to the existing e
 
 1. Define Threats: In order to define the list of threats in your system you can run ``ThreatDetermining.java`` class then define number of threats and their name through the console. The resuult stores in the `Threats` JSON file.
 
-2. Define Stakeholders and their impact Criteria: The involved stakeholders in the analysis and their impact criteria can be determined through ``StakeholderDetermining.java`` class and then the result stores in the `Stakeholder` JSON file. For example, a stakeholder can be *Data subject*, and *Social situation, Individual freedom, Health condition and Financial situation* are its impact criteria.
+2. Define Stakeholders and their impact Criteria: The involved stakeholders in the analysis and their impact criteria can be determined through ``StakeholderDetermining.java`` class and then the result stores in the `Stakeholder` JSON file. For example, a stakeholder can be *Data subject*, and *Social situation, Individual freedom, Health condition and Financial situation* are its impact criteria. Notice that this version of the tool only applicable to defining two stakeholders.
 
 3. Define Protection Goals: The protection goals can be specified through ``GoalDetermining.java`` class and then the result stores in the `Goals` JSON file, for example, *confidentiality, integrity, and availability*.
 
