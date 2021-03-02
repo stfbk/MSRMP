@@ -1,6 +1,6 @@
 # Multi-Stakeholder Risk Assessment Tool
   
-It is a risk assessment tool that assesses the risk exposure levels in a multi-stakeholder manner for a given system. The tool has a two-fold purpose, (I) Evaluate and quantify risk levels for all involved stakeholders, and (II) Solving the risk minimization problem, which is a multi-objective optimization problem. This tool works based on JSON file, all inputs and outputs. Before using the tool, we invite you to read the documentation files (see Documents Section) in order to have a clear view of how this tool works. The documents are the research papers that define the Multi-Stakeholder Risk Minimization Problem and solve this problem.
+It is a risk assessment tool that assesses the risk exposure levels in a multi-stakeholder manner for a given system. The tool has a two-fold purpose, (I) Evaluate and quantify risk levels for all involved stakeholders, and (II) Solving the risk minimization problem, which is a multi-objective optimization problem. This tool works with JSON files, all inputs and outputs. Before using the tool, we invite you to read the documentation files (see Documents Section) in order to have a clear view of how this tool works. The documents are the research papers that define the Multi-Stakeholder Risk Minimization Problem and solve this problem.
 
 
 ## Requirements
@@ -14,9 +14,9 @@ It is a risk assessment tool that assesses the risk exposure levels in a multi-s
 ```
 1. Clone the project
 2. Import project into your desire IDE (our recommendation is IntelliJ IDEA)
-3. Define or import input files (i.e., adding the needed JSON files, such as Threats, Goals, etc.)
+3. Define or import the needed input files (i.e., adding the needed JSON files, such as Threats, Goals, etc.)
 ```
-## Description of the tool
+## Tool Description 
 The tool is divide into two main phases, **1) Risk evaluation 2) Optimization**
 
 For the first phase, you need to define three JSON files (`Threats`, `Goals`, `Stakeholder`) as input artifacts and three other JSON files as can be considered association actions (`Threat_Impact`, `Threat_Controls`, `Threat_Affected`) , and for the second, you need one additional JSON file which is `Threat_Existence`. 
