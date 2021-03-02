@@ -29,11 +29,12 @@ You can either create the input JSON files manually, according to the existing e
 
 3. Define Protection Goals: The protection goals can be specified through ``GoalDetermining.java`` class and then the result stores in the `Goals` JSON file, for example, *confidentiality, integrity, and availability*.
 
-4. Determine Threat-Protection Goal Association : Through this association, you can specify the relation between threats and goals in other word, each threat affect which protection goals. For example, Unauthorized access threat affects confidentiality and integrity protection goals. Through ``ThreatGoalAssociation.java`` class you can specify this association, and the result stores in the `Threat_Affected` JSON file. 
+4. Determine Controls: In this step, you can determine for each threat the potential controls. Through ``ControlDetermining.java`` class you can determine the controls for each threat, and then result stored in the `Threat_Controls` JSON file.
 
-5. Associate Threat Impacts: According to their impact criteria, the impact level of each threat for all involved stakeholders determines in `Threat_Impact` JSON file. In fact, in this action, the risk analyst assigns an integer value to the aversion level that each stakeholder is considered to have against each threat, according to his/her criteria. Through ``PreferenceImpacting.java`` class you can determine the impact levels.
+5. Determine Threat-Protection Goal Association : Through this association, you can specify the relation between threats and goals in other word, each threat affect which protection goals. For example, Unauthorized access threat affects confidentiality and integrity protection goals. Through ``ThreatGoalAssociation.java`` class you can specify this association, and the result stores in the `Threat_Affected` JSON file. 
 
-6. Determine Controls: In this step, you can determine for each threat the potential controls. Through ``ControlDetermining.java`` class you can determine the controls for each threat, and then result stored in the `Threat_Controls` JSON file.
+6. Associate Threat Impacts: According to their impact criteria, the impact level of each threat for all involved stakeholders determines in `Threat_Impact` JSON file. In fact, in this action, the risk analyst assigns an integer value to the aversion level that each stakeholder is considered to have against each threat, according to his/her criteria. Through ``PreferenceImpacting.java`` class you can determine the impact levels.
+
 
 **1) Risk Calculation**
 
