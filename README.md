@@ -18,10 +18,10 @@ This tool works based on JSON file, all inputs and outputs. Before using the too
 3. Define or import input files (i.e., adding the needed JSON files, such as Threats, Goals, etc.)
 ```
 ## Description of the tool
-The tool is divide into two main phases, 1) Risk evaluation 2) Optimization.
+The tool is divide into two main phases, **1) Risk evaluation 2) Optimization**
 
 For the first phase, you need to define three JSON files (`Threats`, `Goals`, `Stakeholder`) as input artifacts and three other JSON files as can be considered association actions (`Threat_Impact`, `Threat_Controls`, `Threat_Affected`) , and for the second, you need one additional JSON file which is `Threat_Existence`. 
-You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or automatically. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in *jsonFiles folder*. For automatically, you need to follow the following steps:
+You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or automatically. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in *jsonFiles folder*. For automatically, you need to follow the preliminary steps:
 
 **Note:** All classes have mentioned below are defined in the *action folder*.
 
@@ -37,9 +37,14 @@ You can either create the input JSON files manually, according to the existing e
 
 6. Determine Controls: In this step, you can determine for each threat the potential controls. Through ``ControlDetermining.java`` class you can determine the controls for each threat, and then result stored in the `Threat_Controls` JSON file.
 
-7. Determine Threat Existence values: This JSON file needs for perfoming optimization where you must define all possible threat existence values for each threat.
+**1) Risk Calculation**
 
-In order to perform optimization and plot the result , after providing all these JSON files, you just need to Run `` RunOptimization.java `` class from *optimization folder*.
+To calculate risk, you need to run ``FinalRiskExposure.java`` class from *action folder*, and the result will be stored in the ``Risk_Exposure_Result`` JSON file. This file contains the risk levels in terms of protection goals for all involved stakeholders. 
+
+**2) Optimization**
+
+For optimization, apart from the input artifacts defined in the preliminary steps, the tool needs one additional input, the `Threat_Existence` JSON file. This JSON file needs to perform optimization where you must define all possible threat existence values for each threat. Hence, you need to define this input within the *jsonFile folder*. You can follow the sample in this folder to create the required input file. 
+In order to perform optimization and plot the result, you just need to Run `` RunOptimization.java `` class from the *optimization folder*. Notice that plotting will take time which depends on the size of the threat list. After plotting, you will be asked to specify the minimum risk level for each stakeholder to see the Pareto optimal points, which you need to insert a **Double Value** from (0,1) interval.  
 
 
 # Documents
