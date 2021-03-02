@@ -16,7 +16,7 @@ It is a risk assessment tool that enables risk analysts to perform a risk evalua
 3. Define or import the needed input files (i.e., adding the required JSON files, such as Threats, Goals, etc.)
 ```
 ## Tool Description 
-The tool is divide into two main phases, **1) Risk evaluation 2) Optimization**
+The tool is divide into two main phases, **1) Risk evaluation 2) Optimization**.
 
 For the first phase, you need to define three JSON files (`Threats`, `Goals`, `Stakeholder`) as input artifacts and three other JSON files as can be considered association actions (`Threat_Impact`, `Threat_Controls`, `Threat_Affected`) , and for the second, you need one additional JSON file which is `Threat_Existence`. 
 You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or through providing data from the console by calling the specific classes. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in the *jsonFiles folder*. For the second method, you need to follow the following **preliminary** steps:
