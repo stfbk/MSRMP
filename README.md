@@ -1,7 +1,9 @@
 # Multi-Stakeholder Risk Assessment Tool
 <p style="text-align: justify">   
+ 
 It is a risk assessment tool that assesses the risk exposure levels in a multi-stakeholder manner for a given system. The tool has a two-fold purpose, (I) Evaluate and quantify risk levels for all involved stakeholders, and (II) Solving the risk minimization problem, which is a multi-objective optimization problem. This tool works with JSON files, all inputs and outputs. Before using the tool, we invite you to read the documentation files (see Documents Section) in order to have a clear view of how this tool works. The documents are the research papers that define the Multi-Stakeholder Risk Minimization Problem and solve this problem.
 
+</p>
 
 ## Requirements
 ```
@@ -22,7 +24,7 @@ The tool is divide into two main phases, **1) Risk evaluation 2) Optimization**
 For the first phase, you need to define three JSON files (`Threats`, `Goals`, `Stakeholder`) as input artifacts and three other JSON files as can be considered association actions (`Threat_Impact`, `Threat_Controls`, `Threat_Affected`) , and for the second, you need one additional JSON file which is `Threat_Existence`. 
 You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or automatically. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in *jsonFiles folder*. For automatically, you need to follow the following **preliminary** steps:
 
-
+<p style="text-align: justify">   
  
 **Note:** All the classes have mentioned below are defined in the *action folder*.
 
@@ -47,10 +49,11 @@ To calculate risk exposure levels, you need to run ``FinalRiskExposure.java`` cl
 For optimization, apart from the input artifacts defined in the preliminary steps, the tool needs one additional input, the `Threat_Existence` JSON file. This JSON file needs to perform optimization where you must define all possible threat existence values for each threat. Hence, you need to define this input within the *jsonFile folder*. You can follow the sample in this folder to create the required input file. 
 In order to perform optimization and plot the result, you just need to Run `` RunOptimization.java `` class from the *optimization folder*. Notice that plotting will take time which depends on the size of the threat list. After plotting, you will be asked to specify the minimum risk level for each stakeholder to see the Pareto optimal points, which you need to insert a **Double Value** from (0,1) interval.  
 
+</p>
 
 ## Documents
 This tool is part of following research papers:
 1. Multi-Stakeholder Cybersecurity Risk Assessment for Data Protection [SECRYPT 2020](https://www.researchgate.net/profile/Majid_Mollaeefar2/publication/342887924_Multi-Stakeholder_Cybersecurity_Risk_Assessment_for_Data_Protection/links/5f0c0e5aa6fdcc4ca4662b8f/Multi-Stakeholder-Cybersecurity-Risk-Assessment-for-Data-Protection.pdf).
 2. Identifying and Quantifying Trade-offs in Multi-Stakeholder Risk Evaluation with Applications to the Data Protection Impact Assessment of the GDPR [Underwriting]
 
-</p>
+
