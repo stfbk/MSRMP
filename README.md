@@ -21,7 +21,7 @@ This tool works based on JSON file, all inputs and outputs. Before using the too
 The tool is divide into two main phases, **1) Risk evaluation 2) Optimization**
 
 For the first phase, you need to define three JSON files (`Threats`, `Goals`, `Stakeholder`) as input artifacts and three other JSON files as can be considered association actions (`Threat_Impact`, `Threat_Controls`, `Threat_Affected`) , and for the second, you need one additional JSON file which is `Threat_Existence`. 
-You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or automatically. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in *jsonFiles folder*. For automatically, you need to follow the preliminary steps:
+You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or automatically. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in *jsonFiles folder*. For automatically, you need to follow the following **preliminary** steps:
 
 **Note:** All classes have mentioned below are defined in the *action folder*.
 
@@ -39,7 +39,7 @@ You can either create the input JSON files manually, according to the existing e
 
 **1) Risk Calculation**
 
-To calculate risk, you need to run ``FinalRiskExposure.java`` class from *action folder*, and the result will be stored in the ``Risk_Exposure_Result`` JSON file. This file contains the risk levels in terms of protection goals for all involved stakeholders. 
+To calculate risk exposure levels, you need to run ``FinalRiskExposure.java`` class from *action folder*, and the result will be stored in the ``Risk_Exposure_Result`` JSON file. This file contains the risk levels in terms of protection goals for all involved stakeholders. 
 
 **2) Optimization**
 
