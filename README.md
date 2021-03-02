@@ -1,5 +1,5 @@
 # Multi-Stakeholder Risk Assessment Tool
-<div style='text-align: left;'> 
+<div style='text-align: justify;'> 
   
 It is a risk assessment tool that assesses the risk exposure levels in a multi-stakeholder manner for a given system. The tool has a two-fold purpose, (I) Evaluate and quantify risk levels for all involved stakeholders, and (II) Solving the risk minimization problem, which is a multi-objective optimization problem. This tool works based on JSON file, all inputs and outputs. Before using the tool, we invite you to read the documentation files (see Documents Section) in order to have a clear view of how this tool works. The documents are the research papers that define the Multi-Stakeholder Risk Minimization Problem and solve this problem.
 
