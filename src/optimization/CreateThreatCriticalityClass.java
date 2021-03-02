@@ -12,6 +12,9 @@ public class CreateThreatCriticalityClass {
    public static void main( String[] args) throws Exception {
        List<List<Double>> List_TC = new ArrayList<>();
        Gson gson = new Gson();
+
+       InputStream in = CreateThreatCriticalityClass.class.getResourceAsStream("src//optimization//Threat_Existence.json");
+
        BufferedReader brte = new BufferedReader(new FileReader("src//jsonFiles//Threat_Existence.json"));
        ThreatExistenceResult rs = gson.fromJson(brte, ThreatExistenceResult.class);
        BufferedReader brta = new BufferedReader(new FileReader("src//jsonFiles//Threat_Affected.json"));

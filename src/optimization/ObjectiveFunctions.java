@@ -21,9 +21,9 @@ class ObjectiveFunctions {
         BufferedReader brta;
         BufferedReader brtrc;
         BufferedReader brg;
-        brg = new BufferedReader(new FileReader("Goals.json"));
-        brta = new BufferedReader(new FileReader("Threat_Affected.json"));
-        brtrc = new BufferedReader(new FileReader("All_Threat_Risk_Calculations.json"));
+        brg = new BufferedReader(new FileReader("src//jsonFiles//Goals.json"));
+        brta = new BufferedReader(new FileReader("src//jsonFiles//Threat_Affected.json"));
+        brtrc = new BufferedReader(new FileReader("src//jsonFiles//All_Threat_Risk_Calculations.json"));
         GoalsResult resultg = gson.fromJson(brg, GoalsResult.class);
         AffectionResult resultaf = gson.fromJson(brta, AffectionResult.class);
         AllThreatAssessmentResult resulta = gson.fromJson(brtrc, AllThreatAssessmentResult.class);
