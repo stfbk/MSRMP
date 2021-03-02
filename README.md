@@ -13,7 +13,7 @@ It is a risk assessment tool that assesses the risk exposure levels in a multi-s
 ```
 1. Clone the project
 2. Import project into your desire IDE (our recommendation is IntelliJ IDEA)
-3. Define or import the needed input files (i.e., adding the needed JSON files, such as Threats, Goals, etc.)
+3. Define or import the needed input files (i.e., adding the required JSON files, such as Threats, Goals, etc.)
 ```
 ## Tool Description 
 The tool is divide into two main phases, **1) Risk evaluation 2) Optimization**
