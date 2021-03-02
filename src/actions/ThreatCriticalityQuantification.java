@@ -39,12 +39,14 @@ public class ThreatCriticalityQuantification {
 					u = u + x;
 				}
 				// threat criticality calculation loop
-				for (int j = 0; j < list_normalized_threat_criticality.size(); j++) {
-					double normalized_threat_criticality = 0;
-					normalized_threat_criticality = list_normalized_threat_criticality.get(j) / u;
-					System.out.printf("Normalized threat criticality equals: %.2f\n", normalized_threat_criticality);
+				System.out.println("---------------------------------------------------------------\n");
+				int s=0;
+				for (PossibleControl c : resulttc.getPossibleControls()) {
+					double normalized_threat_criticality;
+					normalized_threat_criticality = list_normalized_threat_criticality.get(s) / u;
+					System.out.printf("Normalized threat criticality for threat " + c.getThreatName() +" equals: %.2f\n", normalized_threat_criticality);
 					list_normalized_threat_criticality2.add(normalized_threat_criticality);
-
+					s++;
 				}
 				for (int f = 0; f < resultaf.getThreat().size(); f++) {
 					ThreatCriticality threat_criticality_object = new ThreatCriticality();
@@ -56,9 +58,11 @@ public class ThreatCriticalityQuantification {
 
 			}
 
-		} catch (FileNotFoundException e) {
+		}
+		catch (FileNotFoundException e) {
 			e.printStackTrace();
-		} finally {
+		}
+		finally {
 
 			if (brtc != null && brta != null) {
 				try {
@@ -91,8 +95,7 @@ public class ThreatCriticalityQuantification {
 				}
 			}
 		}
-		System.out.println("DONE!");
-
+		//System.out.println("DONE!");
 	}
 
 }

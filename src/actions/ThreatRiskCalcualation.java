@@ -97,7 +97,7 @@ public class ThreatRiskCalcualation {
 				}
 			}
 		}
-		System.out.println("DONE!");
+		//System.out.println("DONE!");
 
 	}
 

@@ -112,7 +112,7 @@ public class GoalRiskExposure {
 				}
 			}
 		}
-		System.out.println("DONE!");
+		System.out.println("DONE! The Risk Exposure Result is calculated.");
 	}
 
 }
