@@ -16,7 +16,6 @@ import java.util.List;
  * To use this class, you must already have calculated (1) All Threat criticalities & (2) Threat impact.
  * This class calculates all threat risk exposures for different stakeholders (data subject & data controller)
  * @author MajidMollaeefar
- *
  */
 public class AllThreatRiskCalculation {
 
@@ -24,10 +23,8 @@ public class AllThreatRiskCalculation {
         List<AllThreatAssessment> allTA_List = new ArrayList<>();
         int ID=1;
         Gson gson = new Gson();
-        BufferedReader brtc;
-        BufferedReader brti;
-        brtc = new BufferedReader(new FileReader( "src//jsonFiles//All_Possible_Threat_Criticalities.json"));
-        brti = new BufferedReader(new FileReader("src//jsonFiles//Threat_Impact.json"));
+        BufferedReader brtc = new BufferedReader(new FileReader( "src//jsonFiles//All_Possible_Threat_Criticalities.json"));
+        BufferedReader brti = new BufferedReader(new FileReader("src//jsonFiles//Threat_Impact.json"));
         AllPossibleTCResult aptc_result = gson.fromJson(brtc, AllPossibleTCResult.class);
         ThreatImpactAssessmentResult resulttia = gson.fromJson(brti, ThreatImpactAssessmentResult.class);
        // if (brtc != null && brti != null) {
@@ -69,7 +66,7 @@ public class AllThreatRiskCalculation {
         FileWriter writer;
         writer = new FileWriter("src//jsonFiles//All_Threat_Risk_Calculations.json");
         writer.write(strjson);
-                writer.flush();
-                writer.close();
+        writer.flush();
+        writer.close();
     }
 }

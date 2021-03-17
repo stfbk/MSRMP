@@ -12,9 +12,6 @@ public class CreateThreatCriticalityClass {
    public static void main( String[] args) throws Exception {
        List<List<Double>> List_TC = new ArrayList<>();
        Gson gson = new Gson();
-
-       InputStream in = CreateThreatCriticalityClass.class.getResourceAsStream("src//optimization//Threat_Existence.json");
-
        BufferedReader brte = new BufferedReader(new FileReader("src//jsonFiles//Threat_Existence.json"));
        ThreatExistenceResult rs = gson.fromJson(brte, ThreatExistenceResult.class);
        BufferedReader brta = new BufferedReader(new FileReader("src//jsonFiles//Threat_Affected.json"));
@@ -120,23 +117,23 @@ public class CreateThreatCriticalityClass {
        int size_list = List_TC.size();
        int x=0;
        int rr=0;
-       String st="";
-       String pp = "double ntc=";
+       StringBuilder st= new StringBuilder();
+       StringBuilder pp = new StringBuilder("double ntc=");
 //       String hh = "/ntc[rr]";
 //       String yy="";
        String nn= "double ntc_temp [] = null;";
-       String nn1= "ntc_temp = new double []{";
+       StringBuilder nn1= new StringBuilder("ntc_temp = new double []{");
        for (int j=0; j< size_list; j++) {
            String ff = "for (int i" + x + " = 0; i" + x + " <" + List_TC.get(j).size() + "; i" + x + "++) {\n";
-           st = st + ff;
+           st.append(ff);
            if (j<1) {
                String gh = "List_TC.get(" + j + ").get(i" + x + ")";
-               pp = pp + gh;
-               nn1 = nn1+ gh;
+               pp.append(gh);
+               nn1.append(gh);
            } else {
                String gh = "List_TC.get(" + j + ").get(i" + x + ")";
-               pp = pp +"+"+ gh;
-               nn1 = nn1+"," +gh;
+               pp.append("+").append(gh);
+               nn1.append(",").append(gh);
            }
 
            x++;
@@ -144,9 +141,9 @@ public class CreateThreatCriticalityClass {
        }
        String nn2 = "};";
        String tt=pp+";";
-       String bb="";
+       StringBuilder bb= new StringBuilder();
        for (int j=0; j< size_list; j++) {
-            bb=bb+"}\n";
+            bb.append("}\n");
        }
        String sourceCode = start+list+p1+st+tt+nn+nn1+nn2+p2+bb+p3+"}\n}";
   //     System.out.print(sourceCode);

@@ -1,13 +1,14 @@
 package optimization
 
 import scala.collection.JavaConverters._
+
 object ParetoSolution {
   def main(args: Array[String]): Unit = {
     //Define Pareto Boundary
     println("Please define a proper double value from (0,1) interval for the Data subject:")
-    val x=scala.io.StdIn.readDouble()
+    val x = scala.io.StdIn.readDouble()
     println("Please define a proper double value from (0,1) interval for the Data controller:")
-    val y=scala.io.StdIn.readDouble()
+    val y = scala.io.StdIn.readDouble()
 
     val pairs = ObjectiveFunctions.getVertices.asScala.filter(e => e.getX > x && e.getY > y)
     val nonDominateList = Dominance.findNonDominatedVertices(pairs.asJava).asScala

@@ -29,10 +29,10 @@ public class ThreatRiskCalcualation {
 		List<Stakeholder> stk_list = new ArrayList<>();
 		List<ThreatAssessment> ta_list = new ArrayList<>();
 		ThreatAssessmentResult tar_object = new ThreatAssessmentResult();
-
 		Gson gson = new Gson();
 		BufferedReader brtc = null;
 		BufferedReader brti = null;
+		//String path = new File("src/jsonFiles/Threat_Criticality.json").getAbsolutePath();
 		try {
 			brtc = new BufferedReader(new FileReader("src//jsonFiles//Threat_Criticality.json"));
 			brti = new BufferedReader(new FileReader("src//jsonFiles//Threat_Impact.json"));

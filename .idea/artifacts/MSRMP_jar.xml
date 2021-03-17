@@ -3,7 +3,6 @@
     <output-path>$PROJECT_DIR$/out/artifacts/MSRMP_jar</output-path>
     <root id="archive" name="MSRMP.jar">
       <element id="module-output" name="MSRMP" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../../Repository/Java lib/gson-2.8.6.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../Program Files (x86)/scala/lib/scala-library.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../Program Files (x86)/scala/lib/scala-reflect.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../Repository/Java lib/javafx-sdk-11.0.2/lib/src.zip" path-in-jar="/" />
@@ -15,6 +14,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/../../Repository/Java lib/javafx-sdk-11.0.2/lib/javafx.swing.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../Repository/Java lib/javafx-sdk-11.0.2/lib/javafx.controls.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../../Repository/Java lib/javafx-sdk-11.0.2/lib/javafx.graphics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../Repository/Java lib/gson-2.8.6.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
