@@ -1,5 +1,5 @@
 # Multi-Stakeholder Risk Assessment Tool
-It is a risk assessment tool that assesses the risk exposure levels in a multi-stakeholder manner for a given system. The tool has a two-fold purpose, (i) Evaluate and quantify risk levels for all involved stakeholders, and (ii) Solving the risk minimization problem, which is a multi-objective optimization problem. This tool works with JSON files, all inputs and outputs. Before using the tool, we invite you to read the documentation files (see Documents Section) in order to have a clear view of how this tool works. The documents are the research papers that define the Multi-Stakeholder Risk Minimization Problem and solve this problem.
+It is a risk assessment tool that enables risk analysts to perform a risk evaluation in a multi-stakeholder manner for a given system. The tool has a two-fold purpose, (i) Evaluate and quantify risk levels for all involved stakeholders, and (ii) Solving the risk minimization problem, which is a multi-objective optimization problem. This tool works with JSON files, all inputs and outputs. Before using the tool, we invite you to read the documentation files (see [Documents Section](https://github.com/Majid-Mollaeefar/MSRMP#documents)) in order to have a clear view of how this tool works. The documents are the research papers that define the Multi-Stakeholder Risk Minimization Problem and solve this problem.
 
 
 ## Requirements
@@ -13,27 +13,28 @@ It is a risk assessment tool that assesses the risk exposure levels in a multi-s
 ```
 1. Clone the project
 2. Import project into your desire IDE (our recommendation is IntelliJ IDEA)
-3. Define or import the needed input files (i.e., adding the needed JSON files, such as Threats, Goals, etc.)
+3. Define or import the needed input files (i.e., adding the required JSON files, such as Threats, Goals, etc.)
 ```
 ## Tool Description 
-The tool is divide into two main phases, **1) Risk evaluation 2) Optimization**
+The tool is divide into two main phases, **1) Risk evaluation 2) Optimization**.
 
 For the first phase, you need to define three JSON files (`Threats`, `Goals`, `Stakeholder`) as input artifacts and three other JSON files as can be considered association actions (`Threat_Impact`, `Threat_Controls`, `Threat_Affected`) , and for the second, you need one additional JSON file which is `Threat_Existence`. 
-You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or automatically. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in *jsonFiles folder*. For automatically, you need to follow the following **preliminary** steps:
+You can either create the input JSON files manually, according to the existing example in the clone project *(jsonFiles folder)* and its files structures, or through providing data from the console by calling the specific classes. For manually way, you just need knowledge about JSON file structure which you can follow the sample files in the *jsonFiles folder*. For the second method, you need to follow the following **preliminary** steps:
  
 **Note:** All the classes have mentioned below are defined in the *action folder*.
 
 1. Define Threats: In order to define the list of threats in your system you can run ``ThreatDetermining.java`` class then define number of threats and their name through the console. The resuult stores in the `Threats` JSON file.
 
-2. Define Stakeholders and their impact Criteria: The involved stakeholders in the analysis and their impact criteria can be determined through ``StakeholderDetermining.java`` class and then the result stores in the `Stakeholder` JSON file. For example, a stakeholder can be *Data subject*, and *Social situation, Individual freedom, Health condition and Financial situation* are its impact criteria.
+2. Define Stakeholders and their impact Criteria: The involved stakeholders in the analysis and their impact criteria can be determined through ``StakeholderDetermining.java`` class and then the result stores in the `Stakeholder` JSON file. For example, a stakeholder can be *Data subject*, and *Social situation, Individual freedom, Health condition and Financial situation* are its impact criteria. Notice that this version of the tool only applicable to defining two stakeholders.
 
 3. Define Protection Goals: The protection goals can be specified through ``GoalDetermining.java`` class and then the result stores in the `Goals` JSON file, for example, *confidentiality, integrity, and availability*.
 
-4. Determine Threat-Protection Goal Association : Through this association, you can specify the relation between threats and goals in other word, each threat affect which protection goals. For example, Unauthorized access threat affects confidentiality and integrity protection goals. Through ``ThreatGoalAssociation.java`` class you can specify this association, and the result stores in the `Threat_Affected` JSON file. 
+4. Determine Controls: In this step, you can determine for each threat the potential controls. Through ``ControlDetermining.java`` class you can determine the controls for each threat, and then result stored in the `Threat_Controls` JSON file.
 
-5. Associate Threat Impacts: According to their impact criteria, the impact level of each threat for all involved stakeholders determines in `Threat_Impact` JSON file. In fact, in this action, the risk analyst assigns an integer value to the aversion level that each stakeholder is considered to have against each threat, according to his/her criteria. Through ``PreferenceImpacting.java`` class you can determine the impact levels.
+5. Determine Threat-Protection Goal Association : Through this association, you can specify the relation between threats and goals in other word, each threat affect which protection goals. For example, Unauthorized access threat affects confidentiality and integrity protection goals. Through ``ThreatGoalAssociation.java`` class you can specify this association, and the result stores in the `Threat_Affected` JSON file. 
 
-6. Determine Controls: In this step, you can determine for each threat the potential controls. Through ``ControlDetermining.java`` class you can determine the controls for each threat, and then result stored in the `Threat_Controls` JSON file.
+6. Associate Threat Impacts: According to their impact criteria, the impact level of each threat for all involved stakeholders determines in `Threat_Impact` JSON file. In fact, in this action, the risk analyst assigns an integer value to the aversion level that each stakeholder is considered to have against each threat, according to his/her criteria. Through ``PreferenceImpacting.java`` class you can determine the impact levels.
+
 
 **1) Risk Calculation**
 
