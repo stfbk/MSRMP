@@ -1,0 +1,134 @@
+{
+  "PossibleControls": [
+    {
+      "threat_name": "Unlimited data storage",
+      "controls": [
+        {
+          "control_name": "Purpose specification",
+          "implementation_status": 1.0
+        },
+        {
+          "control_name": "Ensuring limited data processing",
+          "implementation_status": 1.0
+        },
+        {
+          "control_name": "Ensuring purpose related processing",
+          "implementation_status": 0.5
+        },
+        {
+          "control_name": "Ensuring data minimization",
+          "implementation_status": 0.5
+        },
+        {
+          "control_name": "Enabling data deletion",
+          "implementation_status": 0.0
+        }
+      ],
+      "threat_existence": 0.4
+    },
+    {
+      "threat_name": "Unauthorized access and disclosure",
+      "controls": [
+        {
+          "control_name": "Ensuring data subject authentication",
+          "implementation_status": 1.0
+        },
+        {
+          "control_name": "Ensuring staff authentication",
+          "implementation_status": 1.0
+        },
+        {
+          "control_name": "Ensuring device authentication",
+          "implementation_status": 0.5
+        },
+        {
+          "control_name": "Logging access to personal data",
+          "implementation_status": 0.5
+        },
+        {
+          "control_name": "Performing regular privacy audits",
+          "implementation_status": 0.0
+        },
+        {
+          "control_name": "Ensuring data anonymization",
+          "implementation_status": 0.5
+        },
+        {
+          "control_name": "Providing confidential communication",
+          "implementation_status": 1.0
+        },
+        {
+          "control_name": "Providing usable access control",
+          "implementation_status": 0.5
+        },
+        {
+          "control_name": "Ensuring secure storage",
+          "implementation_status": 1.0
+        },
+        {
+          "control_name": "Ensuring physical security of infrastructure",
+          "implementation_status": 0.5
+        }
+      ],
+      "threat_existence": 0.35
+    },
+    {
+      "threat_name": "Linkage Attack",
+      "controls": [
+        {
+          "control_name": "Providing confidential communication",
+          "implementation_status": 1.0
+        },
+        {
+          "control_name": "Logging access to personal data",
+          "implementation_status": 0.5
+        },
+        {
+          "control_name": "Ensuring data subject authentication",
+          "implementation_status": 1.0
+        },
+        {
+          "control_name": "Ensuring data anonymization",
+          "implementation_status": 0.5
+        }
+      ],
+      "threat_existence": 0.25
+    },
+    {
+      "threat_name": "Denial of service",
+      "controls": [
+        {
+          "control_name": "Enabling offline authentication",
+          "implementation_status": 0.0
+        },
+        {
+          "control_name": "Network monitoring",
+          "implementation_status": 0.5
+        },
+        {
+          "control_name": "Implementing the preventing denial of service attack mechanisms such as firewalls, IDS, etc.",
+          "implementation_status": 0.0
+        }
+      ],
+      "threat_existence": 0.8333333333333334
+    },
+    {
+      "threat_name": "Threat to intervenability",
+      "controls": [
+        {
+          "control_name": "Informing data subjects about data processing",
+          "implementation_status": 0.5
+        },
+        {
+          "control_name": "Handling data subjects change requests",
+          "implementation_status": 0.5
+        },
+        {
+          "control_name": "Providing data export functionality",
+          "implementation_status": 0.0
+        }
+      ],
+      "threat_existence": 0.6666666666666667
+    }
+  ]
+}

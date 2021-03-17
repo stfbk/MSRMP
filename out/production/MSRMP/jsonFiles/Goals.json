@@ -1,0 +1,28 @@
+{
+  "Goals": [
+    {
+      "name": "Confidentiality",
+      "id": 1
+    },
+    {
+      "name": "Integrity",
+      "id": 2
+    },
+    {
+      "name": "Availability",
+      "id": 3
+    },
+    {
+      "name": "Unlinkability",
+      "id": 4
+    },
+    {
+      "name": "Transparency",
+      "id": 5
+    },
+    {
+      "name": "Intervenability",
+      "id": 6
+    }
+  ]
+}
