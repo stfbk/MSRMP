@@ -70,7 +70,7 @@ class ObjectiveFunctions {
         }
         List<ParetoVector> list = new ArrayList<>();
         for (int i = 0; i < F1.length; i++) {
-            list.add(new ParetoVector(F1[i], F2[i]));
+            list.add(new ParetoVector(F1[i], F2[i],i+1));
         }
         return list;
     }
